@@ -31,24 +31,11 @@ import com.example.pertemuan5.R // Sesuaikan dengan package project kamu
 
 
         )
-        Row {
-            gender.forEach { item ->
-                Row(
-                    modifier = Modifier.selectable(
-                        selected = textJK == item,
-                        onClick = { textJK = item }
-                    ),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    RadioButton(
-                        selected = textJK == item,
-                        onClick = { textJK = item }
-                    )
-                    Text(item)
-                }
-            }
-        }
-        OutlinedTextField(       }
-        }
-    }
-}
+        HorizontalDivider(
+            modifier = Modifier.padding(
+                bottom = dimensionResource(R.dimen.padding_medium),
+                top = dimensionResource(R.dimen.padding_medium)
+            ),
+            thickness = dimensionResource(R.dimen.divider_tipis),
+            color = Color.DarkGray
+        )
