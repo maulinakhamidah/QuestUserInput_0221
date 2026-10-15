@@ -29,11 +29,16 @@ import com.example.praktikum5.R
 
 @Composable
 
-        ) {
-            Column(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)) {
-                Text(text = "Nama : " + nama.value, color = Color.White)
-                Text(text = "Gender : " + jenis.value, color = Color.White)
-                Text(text = "Alamat : " + alamat.value, color = Color.White)
+        OutlinedTextField(
+            value = textAlamat.value,
+            singleLine = true,
+            modifier = Modifier.width(250.dp),
+            label = { Text("Alamat") },
+            onValueChange = {
+                textAlamat.value = it
+            }
+        )
+
             }
         }
     }
