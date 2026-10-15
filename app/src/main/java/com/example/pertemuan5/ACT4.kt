@@ -29,13 +29,11 @@ import com.example.praktikum5.R
 
 @Composable
 
-
-    // Variabel-variabel untuk menyimpan data yang diperoleh dari komponen UI
-    var nama = remember { mutableStateOf(value = "") }
-    var alamat = remember { mutableStateOf(value = "") }
-    var jenis = remember { mutableStateOf(value = "") }
-
-
+        ) {
+            Column(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)) {
+                Text(text = "Nama : " + nama.value, color = Color.White)
+                Text(text = "Gender : " + jenis.value, color = Color.White)
+                Text(text = "Alamat : " + alamat.value, color = Color.White)
             }
         }
     }
